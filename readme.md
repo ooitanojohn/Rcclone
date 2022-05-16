@@ -16,6 +16,8 @@
 - drive → Douwnloads → 格納したいフォルダではなく直接ディレクトリにDLしたい(windows,linux問わず)
 - driveのCRUD操作も可能な為、コマンドのalias化をすれば動作の軽減になる
 
+### 情報求
+- 共有ドライブの認証設定
 ###
 ## 作業手順
 ### DL
@@ -61,5 +63,17 @@ rc-alias()
 #### ファイル作成
   - rcto name:test/test.txt
 #### 削除
-  - rcdl name:test
+  - rcdl name:test(指定したディレクトリ以下削除)
+  - rc rmdir (空フォルダのみ削除)
 
+#### フォルダ同期
+  - rc sync -i ローカルdir gd: driveDir [https://rclone.org/commands/rclone_sync/]
+
+
+
+### その他
+#### フォルダサイズ
+  - rc size gd:test
+
+#### アプデ
+  - rclone selfupdate
