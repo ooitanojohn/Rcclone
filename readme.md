@@ -72,6 +72,8 @@ rc-alias()
 
 
 ### その他
+#### ファイルに書き込み
+  - echo "test" | rc rcat gd:test/test.txt
 #### フォルダサイズ
   - rc size gd:test
 
